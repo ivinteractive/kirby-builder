@@ -87,8 +87,8 @@
       @open="onOpenDialog"
       @close="onCloseDialog"
     >
-      <k-list>
-        <k-list-item
+      <k-items>
+        <k-item
           :class="[
             'kBuilder__addBlockButton',
             'kBuilder__addBlockButton--' + key
@@ -104,8 +104,8 @@
               class="kBuilder__addBlockButtonIcon"
             />
           </template>
-        </k-list-item>
-      </k-list>
+        </k-item>
+      </k-items>
     </k-dialog>
   </k-field>
 </template>
@@ -477,7 +477,7 @@ kBuilder__block:hover .kBuilder__dragDropHandle--col-1 {
   position: relative;
 }
 
-.kBuilder__dialog .k-list-item-image,
+.kBuilder__dialog .k-item-image,
 .kBuilder__dialog .k-dialog-button-submit {
   display: none;
 }

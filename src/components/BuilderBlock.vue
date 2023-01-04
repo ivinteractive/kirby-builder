@@ -113,7 +113,10 @@
         :value="{}"
         :fields="fieldSet.fields"
         :validate="false"
-        v-on="$listeners"
+        @input="onBlockInput"
+        @delete="deleteBlock"
+        @clone="cloneBlock"
+        @transformed="transformed"
         :key="fieldSet.key + _uid"
       />
     </div>
@@ -265,6 +268,7 @@ export default {
       // this.$emit("input", this.value);
     },
     onBlockInput(event) {
+      this.value = event
       this.$emit("input", this.value);
     },
     displayPreview() {

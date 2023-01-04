@@ -55,7 +55,7 @@
               : ''
           "
           :cssContents="cssContents"
-          @input="onBlockInput"
+          @input="onBlockInput(index, $event)"
           @clone="cloneBlock"
           @delete="deleteBlock"
           @transformed="updateValue(index, $event)"
@@ -247,7 +247,8 @@ export default {
         }
       });
     },
-    onBlockInput(event) {
+    onBlockInput(index, event) {
+      this.updateValue(index, event)
       this.$emit("input", this.value);
     },
     onBlockMoved(event) {

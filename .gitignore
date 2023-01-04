@@ -21,3 +21,6 @@ Thumbs.db
 
 # Composer
 .composer.lock
+
+# Yarn
+yarn.lock
